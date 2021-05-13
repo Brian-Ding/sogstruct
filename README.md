@@ -1,1 +1,1 @@
-# goStruct
+# sogstruct
