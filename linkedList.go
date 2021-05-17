@@ -38,7 +38,7 @@ func (list *linkedList) Find(value string) *linkedListNode {
 }
 
 func (list *linkedList) AddAfter(node *linkedListNode, newNode *linkedListNode) {
-	if list == nil {
+	if list == nil || node == nil {
 		return
 	}
 
@@ -67,11 +67,11 @@ func (list *linkedList) AddAfterValue(node *linkedListNode, value string) {
 }
 
 func (list *linkedList) AddBefore(node *linkedListNode, newNode *linkedListNode) {
-	if list == nil {
+	if list == nil || node == nil {
 		return
 	}
 
-	lastNode := list.head
+	var lastNode *linkedListNode
 	listNode := list.head
 	for {
 		if listNode == nil {
@@ -79,7 +79,11 @@ func (list *linkedList) AddBefore(node *linkedListNode, newNode *linkedListNode)
 		}
 
 		if listNode == node {
-			lastNode.next = newNode
+			if lastNode == nil {
+				list.head = newNode
+			} else {
+				lastNode.next = newNode
+			}
 			if newNode != nil {
 				newNode.next = listNode
 			}
