@@ -5,7 +5,7 @@ import (
 )
 
 func TestStackPushPop(t *testing.T) {
-	s := newStack()
+	s := NewStack()
 	s.Push("1")
 
 	if want, got := "1", s.Pop(); got != want {
@@ -33,7 +33,7 @@ func TestStackPushPop(t *testing.T) {
 }
 
 func TestStackClear(t *testing.T) {
-	s := newStack()
+	s := NewStack()
 	s.Push("1")
 	s.Push("2")
 	s.Push("3")

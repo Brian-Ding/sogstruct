@@ -10,11 +10,11 @@ type linkedList struct {
 	// tail *LinkedListNode
 }
 
-func newLinkedListNode(value string) *linkedListNode {
+func NewLinkedListNode(value string) *linkedListNode {
 	return &linkedListNode{value: value}
 }
 
-func newLinkedList() *linkedList {
+func NewLinkedList() *linkedList {
 	return &linkedList{}
 }
 
@@ -63,7 +63,7 @@ func (list *linkedList) AddAfter(node *linkedListNode, newNode *linkedListNode) 
 }
 
 func (list *linkedList) AddAfterValue(node *linkedListNode, value string) {
-	list.AddAfter(node, newLinkedListNode(value))
+	list.AddAfter(node, NewLinkedListNode(value))
 }
 
 func (list *linkedList) AddBefore(node *linkedListNode, newNode *linkedListNode) {
@@ -97,7 +97,7 @@ func (list *linkedList) AddBefore(node *linkedListNode, newNode *linkedListNode)
 }
 
 func (list *linkedList) AddBeforeValue(node *linkedListNode, value string) {
-	list.AddBefore(node, newLinkedListNode(value))
+	list.AddBefore(node, NewLinkedListNode(value))
 }
 
 func (list *linkedList) AddFirst(newNode *linkedListNode) {
@@ -113,5 +113,5 @@ func (list *linkedList) AddFirst(newNode *linkedListNode) {
 }
 
 func (list *linkedList) AddFirstValue(value string) {
-	list.AddFirst(newLinkedListNode(value))
+	list.AddFirst(NewLinkedListNode(value))
 }
