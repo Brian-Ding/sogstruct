@@ -1,7 +1,7 @@
 # sogstruct
 
 - [x] stack
-- [ ] linkedlist
+- [x] linkedlist
 - [ ] queue
 - [ ] heap
 - [ ] binarytree

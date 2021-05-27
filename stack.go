@@ -5,7 +5,7 @@ type stack struct {
 }
 
 // Construct a new stack
-func newStack() *stack {
+func NewStack() *stack {
 	return &stack{}
 }
 
