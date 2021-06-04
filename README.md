@@ -6,6 +6,6 @@
 - [ ] heap
 - [ ] binarytree
 - [ ] binarysearchtree
-- [ ] btree
+- [x] btree
 - [ ] bplustree
 - [ ] redblacktree
